@@ -21,6 +21,9 @@ export const Home = () => {
 
   return (
     <div className="users_container">
+      <Link to="addUser">
+        <Btn classNameBtn="btn btn-contact" text="Add User" />
+      </Link>
       <table className="users_table">
         <thead className="users_table_header">
           <tr>
