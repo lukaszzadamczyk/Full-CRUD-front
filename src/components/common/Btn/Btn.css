@@ -8,6 +8,7 @@
   text-align: center;
   text-decoration: none;
   font-size: 14px;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -25,5 +26,29 @@
 }
 
 .btn-contact {
+  margin-bottom: 5px;
+  padding: 12px 15px;
   background-color: #e82764;
+}
+
+.btn-save {
+  width: 100%;
+  padding: 12px 18px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #058d96;
+  cursor: pointer;
+}
+
+.btn-home {
+  width: 100%;
+  padding: 12px 18px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #e82764;
+  cursor: pointer;
 }
