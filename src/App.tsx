@@ -1,19 +1,18 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import { Home } from "../src/components/pages/Home/Home";
 
-import logo from "./logo.svg";
-import "./App.css";
-import { Test } from "types";
-
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const foobar: Test = {
-    name: "Lukasz",
-  };
-
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <BrowserRouter>
+      <ToastContainer position="top-center" />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
