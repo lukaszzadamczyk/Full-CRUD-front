@@ -8,11 +8,17 @@
   text-align: center;
   text-decoration: none;
   font-size: 14px;
+  text-transform: uppercase;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .btn-edit {
   background-color: #3a8219;
+}
+
+.btn-edit:hover {
+  background-color: #50b024;
 }
 
 .btn-view {
@@ -20,10 +26,54 @@
   color: #000;
 }
 
+.btn-view:hover {
+  background-color: #cfd5ce;
+}
+
 .btn-delete {
   background-color: #b14038;
 }
 
+.btn-delete:hover {
+  background-color: #d64e45;
+}
+
 .btn-contact {
+  margin-bottom: 5px;
+  padding: 12px 15px;
   background-color: #e82764;
+}
+
+.btn-contact:hover {
+  background-color: #c62558;
+}
+
+.btn-save {
+  width: 100%;
+  padding: 12px 18px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #058d96;
+  cursor: pointer;
+}
+
+.btn-save:hover {
+  background-color: #08b5c1;
+}
+
+.btn-home {
+  width: 100%;
+  padding: 12px 18px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #e82764;
+  cursor: pointer;
+}
+
+.btn-home:hover {
+  background-color: #c62558;
 }
