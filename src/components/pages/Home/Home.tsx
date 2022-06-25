@@ -19,6 +19,14 @@ export const Home = () => {
     loadData();
   }, []);
 
+  const handleDeleteUser = (id: string) => {
+    if (window.confirm("Are you sure you want to delete the User?")) {
+      axios.delete(`http://localhost:3001/api/delete/${id}`);
+      toast.success("Contact Deleted 😔");
+      setTimeout(() => loadData(), 500);
+    }
+  };
+
   return (
     <div className="users_container">
       <Link to="addUser">
@@ -36,18 +44,23 @@ export const Home = () => {
         </thead>
         <tbody className="users_table_body">
           {data.map((item, index) => {
+            const { id, name, contact, email } = item;
             return (
-              <tr key={item.id}>
+              <tr key={id}>
                 <th scope="row">{index + 1}</th>
-                <td>{item.name}</td>
-                <td>{item.contact}</td>
-                <td>{item.email}</td>
+                <td>{name}</td>
+                <td>{contact}</td>
+                <td>{email}</td>
                 <td className="users_buttons">
-                  <Link to={`/update/${item.id}`}>
+                  <Link to={`/update/${id}`}>
                     <Btn classNameBtn="btn btn-edit" text="Edit" />
                   </Link>
-                  <Btn classNameBtn="btn btn-delete" text="Delete" />
-                  <Link to={`/view/${item.id}`}>
+                  <Btn
+                    classNameBtn="btn btn-delete"
+                    text="Delete"
+                    deleteUser={() => handleDeleteUser(id as string)}
+                  />
+                  <Link to={`/view/${id}`}>
                     <Btn classNameBtn="btn btn-view" text="View" />
                   </Link>
                 </td>
