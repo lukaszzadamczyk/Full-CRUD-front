@@ -13,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/addUser" element={<AddUser />} />
+        <Route path="/edit/:id" element={<AddUser />} />
       </Routes>
     </BrowserRouter>
   );

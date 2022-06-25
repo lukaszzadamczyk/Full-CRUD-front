@@ -22,25 +22,50 @@ export const AddUser = () => {
 
   const navigate = useNavigate();
 
+  const { id } = useParams();
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3001/api/get/${id}`)
+      .then((res) => setNewDataUser({ ...res.data[0] }));
+  }, [id]);
+
   const handleFormSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!name || !contact || !email) {
       toast.error("Please provide correct value.");
     } else {
-      axios
-        .post("http://localhost:3001/api/add", {
-          name,
-          contact,
-          email,
-        })
-        .then(() => {
-          setNewDataUser({ name: "", contact: "", email: "" });
-        })
-        .catch((err) => toast.error(err.response.data));
-      toast.success(`User ${name} Added 😎`);
-      setTimeout(() => {
-        navigate(-1);
-      }, 500);
+      if (!id) {
+        axios
+          .post("http://localhost:3001/api/add", {
+            name,
+            contact,
+            email,
+          })
+          .then(() => {
+            setNewDataUser({ name: "", contact: "", email: "" });
+          })
+          .catch((err) => toast.error(err.response.data));
+        toast.success(`User ${name} Added 😎`);
+        setTimeout(() => {
+          navigate(-1);
+        }, 500);
+      } else {
+        axios
+          .put(`http://localhost:3001/api/update/${id}`, {
+            name,
+            contact,
+            email,
+          })
+          .then(() => {
+            setNewDataUser({ name: "", contact: "", email: "" });
+          })
+          .catch((err) => toast.error(err.response.data));
+        toast.success(`User ${name} Updated 🧐`);
+        setTimeout(() => {
+          navigate(-1);
+        }, 500);
+      }
     }
   };
 
@@ -56,7 +81,7 @@ export const AddUser = () => {
         <Input
           id="name"
           type="text"
-          value={name}
+          value={name || ""}
           name="name"
           placeholder="Your Name"
           change={handleInputChange}
@@ -67,7 +92,7 @@ export const AddUser = () => {
           type="number"
           name="contact"
           placeholder="Your Phone Number..."
-          value={contact}
+          value={contact || ""}
           change={handleInputChange}
         />
         <Label htmlFor="email" text="Email" />
@@ -76,10 +101,10 @@ export const AddUser = () => {
           type="email"
           name="email"
           placeholder="Your Email..."
-          value={email}
+          value={email || ""}
           change={handleInputChange}
         />
-        <Btn classNameBtn="btn btn-save" text="save" />
+        <Btn classNameBtn="btn btn-save" text={id ? "Update" : "Save"} />
         <Link to="/">
           <Btn classNameBtn="btn btn-home" text="Go Home" />
         </Link>

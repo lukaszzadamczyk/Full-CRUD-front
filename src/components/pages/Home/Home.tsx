@@ -52,7 +52,7 @@ export const Home = () => {
                 <td>{contact}</td>
                 <td>{email}</td>
                 <td className="users_buttons">
-                  <Link to={`/update/${id}`}>
+                  <Link to={`/edit/${id}`}>
                     <Btn classNameBtn="btn btn-edit" text="Edit" />
                   </Link>
                   <Btn
