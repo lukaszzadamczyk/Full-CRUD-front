@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { Home } from "../src/components/pages/Home/Home";
-import { AddUser } from "../src/components/pages/AddUser/AddUser";
+import { Home } from "./components/views/Home/Home";
+import { AddUser } from "./components/views/AddUser/AddUser";
 
 import "react-toastify/dist/ReactToastify.css";
 
