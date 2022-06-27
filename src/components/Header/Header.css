@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vh;
+  overflow: hidden;
+  background-color: #058d96;
+}
+
+.header_logo {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header_menu {
+  display: flex;
+}
+
+.header_link {
+  display: block;
+  height: 100%;
+  padding: 0 1rem;
+  border-right: 1px solid white;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.header_link:hover {
+  color: #e82764;
+}
+
+.header_link:nth-child(2) {
+  border: none;
+}
+
+.active {
+  color: #e82764;
+}
