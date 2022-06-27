@@ -22,7 +22,14 @@
 }
 
 .user-card-header p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.4rem;
+}
+
+.user-card-header p span {
+  margin-left: 0.5rem;
 }
 
 .user-data {

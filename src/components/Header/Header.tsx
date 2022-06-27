@@ -1,12 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 
 import "./Header.css";
 
 export const Header = () => {
   return (
     <header className="header">
-      <h1 className="header_logo">User Data Management</h1>
+      <h1 className="header_logo">
+        {<ManageAccountsIcon fontSize="large" />}
+        <span>User Data Management</span>
+      </h1>
+
       <div className="header_menu">
         <NavLink className="header_link" to="/">
           <p>Home</p>

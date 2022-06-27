@@ -1,8 +1,5 @@
 .users_container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 20vh;
   text-align: center;
 }
 
@@ -26,6 +23,7 @@
 }
 
 .users_table_body tr {
+  background-color: #fff;
   border-bottom: 2px solid #ddd;
 }
 

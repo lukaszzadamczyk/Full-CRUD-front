@@ -8,9 +8,14 @@
 }
 
 .header_logo {
+  display: flex;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.header_logo span {
+  margin-left: 1rem;
 }
 
 .header_menu {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+import PersonIcon from "@mui/icons-material/Person";
 import { UserEntity } from "types";
 import { Btn } from "../../common/Btn/Btn";
 
@@ -26,7 +27,10 @@ export const View = () => {
     <div className="user-view">
       <div className="user-card">
         <div className="user-card-header">
-          <p>User Details</p>
+          <p>
+            {<PersonIcon fontSize="large" />}
+            <span>User Details</span>
+          </p>
         </div>
         <div className="user-data">
           <strong>ID: </strong>
