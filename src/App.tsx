@@ -7,7 +7,6 @@ import { View } from "./components/views/View/View";
 import { Header } from "./components/Header/Header";
 
 import "react-toastify/dist/ReactToastify.css";
-import "./App.css";
 
 function App() {
   return (
