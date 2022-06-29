@@ -13,7 +13,7 @@ $black: #000;
 
 @mixin breakpoint($point) {
     @if $point == md {
-        @media (min-width: 48em) {
+        @media (min-width: 850px) {
             @content;
         }
     }

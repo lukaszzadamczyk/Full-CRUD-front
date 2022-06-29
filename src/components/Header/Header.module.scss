@@ -2,29 +2,39 @@
 
 .header {
     display: flex;
-    max-width: 1920px;
+    height: 80px;
+    width: 100%;
     align-items: center;
-    margin: 0 auto;
     justify-content: space-between;
-    padding: 0 1.5rem;
     overflow: hidden;
     background-color: $primary;
     transition: 0.3s ease all;
     &_logo {
         display: flex;
+        flex: 50%;
+        justify-content: left;
+        font-size: 1rem;
         color: $white;
         text-transform: uppercase;
         letter-spacing: 1px;
+        @include breakpoint(md){
+            font-size: 2rem;
+        }
     }
     &_logo span {
         margin-left: 1rem;
     }
     &_menu {
         display: flex;
+        flex: 50%;
+        justify-content: right;
+        max-height: 80px;
+        font-size: 0.8rem;
+        @include breakpoint(md){
+            font-size: 1rem;
+        }
     }
     &_link {
-        display: block;
-        height: 100%;
         padding: 0 1rem;
         border-right: 1px solid $white;
         color: $white;

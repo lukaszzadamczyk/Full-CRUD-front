@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -6,6 +6,8 @@ import { AiOutlineClose } from "react-icons/ai";
 import classes from "./Header.module.scss";
 
 export const Header = () => {
+  const [showLinks, setShowLinks] = useState(false);
+
   return (
     <header className={classes.header}>
       <h1 className={classes.header_logo}>
