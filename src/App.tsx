@@ -12,7 +12,7 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
-      <Header></Header>
+      <Header />
       <ToastContainer position="top-center" className="toast" />
       <Routes>
         <Route path="/" element={<Home />} />
