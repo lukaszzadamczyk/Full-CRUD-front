@@ -1,0 +1,39 @@
+@import '../../../styles/scss/variables/variables.scss';
+
+.user {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    &_card {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    }
+    &_header {
+        height: 10vh;
+        line-height: 10vh;
+        background-color: $primary;
+        color: $white;
+        & p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4rem;
+            & span {
+                margin-left: 0.5rem;
+            }
+        }
+    }
+    &_data {
+        padding: 10%;
+        & span {
+            display: inline-block;
+            margin-bottom: 10px;
+          }
+    }
+  }
+  

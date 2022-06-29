@@ -2,12 +2,13 @@ import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Btn } from "../../common/Btn/Btn";
 import { UserEntity } from "types";
-
-import "./AddUser.css";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { Input } from "../../common/Input/Input";
 import { Label } from "../../common/Label/Label";
+import classes from "./AddUser.module.scss";
+import btnClasses from "../../common/Btn/Btn.module.scss";
+import inputClasses from "../../common/Input/Input.module.scss";
 
 const initialState: UserEntity = {
   name: "",
@@ -75,11 +76,12 @@ export const AddUser = () => {
   };
 
   return (
-    <div className="form_container">
-      <form className="add_form" onSubmit={handleFormSubmit}>
+    <div className={classes.form}>
+      <form className={classes.form_add} onSubmit={handleFormSubmit}>
         <Label htmlFor="name" text="Name" />
         <Input
           id="name"
+          classInput={inputClasses.input_name}
           type="text"
           value={name || ""}
           name="name"
@@ -89,6 +91,7 @@ export const AddUser = () => {
         <Label htmlFor="contact" text="Contact" />
         <Input
           id="contact"
+          classInput={inputClasses.input_contact}
           type="number"
           name="contact"
           placeholder="Your Phone Number..."
@@ -98,15 +101,24 @@ export const AddUser = () => {
         <Label htmlFor="email" text="Email" />
         <Input
           id="email"
+          classInput={inputClasses.input_email}
           type="email"
           name="email"
           placeholder="Your Email..."
           value={email || ""}
           change={handleInputChange}
         />
-        <Btn classNameBtn="btn btn-save" text={id ? "Update" : "Save"} />
+        <Btn
+          classNameBtn={btnClasses.btn}
+          classNameBtnSecondary={btnClasses.btn_save}
+          text={id ? "Update" : "Save"}
+        />
         <Link to="/">
-          <Btn classNameBtn="btn btn-home" text="Go Home" />
+          <Btn
+            classNameBtn={btnClasses.btn}
+            classNameBtnSecondary={btnClasses.btn_home}
+            text="Go Home"
+          />
         </Link>
       </form>
     </div>

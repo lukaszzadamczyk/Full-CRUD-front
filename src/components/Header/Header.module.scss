@@ -1,0 +1,41 @@
+@import '../../styles/scss/variables/variables.scss';
+
+.header {
+    display: flex;
+    max-width: 1920px;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    overflow: hidden;
+    background-color: $primary;
+    transition: 0.3s ease all;
+    &_logo {
+        display: flex;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    &_logo span {
+        margin-left: 1rem;
+    }
+    &_menu {
+        display: flex;
+    }
+    &_link {
+        display: block;
+        height: 100%;
+        padding: 0 1rem;
+        border-right: 1px solid $white;
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.3s;
+    }
+    &_link:hover {
+        color: $add;
+    }
+    &_link:nth-child(2) {
+        border: none;
+    }
+  }

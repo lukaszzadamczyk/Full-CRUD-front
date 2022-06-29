@@ -1,0 +1,15 @@
+@import '../../../styles/scss/variables/variables.scss';
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    &_add {
+        margin: auto;
+        padding: 20px;
+        max-width: 600px;
+        align-content: center;
+    }
+  }

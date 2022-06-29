@@ -1,9 +1,8 @@
 import React, { ChangeEvent } from "react";
 
-import "./Input.css";
-
 interface Props {
   id: string;
+  classInput: string;
   type: string;
   name: string;
   placeholder: string;
@@ -12,10 +11,11 @@ interface Props {
 }
 
 export const Input = (props: Props) => {
-  const { id, type, name, placeholder, value, change } = props;
+  const { id, classInput, type, name, placeholder, value, change } = props;
 
   return (
     <input
+      className={classInput}
       id={id}
       type={type}
       name={name}
