@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -10,7 +9,6 @@ export const Header = () => {
   return (
     <header className={classes.header}>
       <h1 className={classes.header_logo}>
-        {<ManageAccountsIcon fontSize="large" />}
         <span>User Data Management</span>
       </h1>
       <nav className={classes.header_menu}>

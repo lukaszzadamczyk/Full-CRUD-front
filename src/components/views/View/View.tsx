@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
-import PersonIcon from "@mui/icons-material/Person";
 import { UserEntity } from "types";
 import { Btn } from "../../common/Btn/Btn";
 import classes from "./View.module.scss";
@@ -28,7 +27,6 @@ export const View = () => {
       <div className={classes.user_card}>
         <div className={classes.user_header}>
           <p>
-            {<PersonIcon fontSize="large" />}
             <span>User Details</span>
           </p>
         </div>
