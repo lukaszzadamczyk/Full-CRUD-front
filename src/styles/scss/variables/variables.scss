@@ -11,10 +11,24 @@ $view: #b6bcb5;
 $white: #fff;
 $black: #000;
 
-@mixin breakpoint($point) {
-    @if $point == md {
-        @media (min-width: 850px) {
+$breakpoints: (
+    xsmall: 360px,
+    small: 460px,
+    medium: 640px,
+    large: 800px,
+    xlarge: 1024px,
+    xxlarge: 1280px,
+    xxxlarge: 1440px,
+);
+
+@mixin mq($breakpoint) {
+    $size: map-get($map: $breakpoints, $key: $breakpoint);
+    @if ($size){
+        @media (min-width: #{$size}) {
             @content;
         }
+    }
+    @else{
+        @error '"#{$breakpoint}" - it does not recognize this size';
     }
 }

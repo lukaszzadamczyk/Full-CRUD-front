@@ -17,7 +17,13 @@
         color: $white;
         text-transform: uppercase;
         letter-spacing: 1px;
-        @include breakpoint(md){
+        @include mq(xsmall){
+            font-size: 1rem;
+        }
+        @include mq(large){
+            font-size: 1.5rem;
+        }
+        @include mq(xxlarge){
             font-size: 2rem;
         }
     }
@@ -30,7 +36,7 @@
         justify-content: right;
         max-height: 80px;
         font-size: 0.8rem;
-        @include breakpoint(md){
+        @include mq(xsmall){
             font-size: 1rem;
         }
     }

@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { BiMenuAltRight } from "react-icons/bi";
-import { AiOutlineClose } from "react-icons/ai";
+import { FaUsersCog } from "react-icons/fa";
 
 import classes from "./Header.module.scss";
 
 export const Header = () => {
-  const [showLinks, setShowLinks] = useState(false);
-
   return (
     <header className={classes.header}>
       <h1 className={classes.header_logo}>
-        <span>User Data Management</span>
+        <span>
+          <FaUsersCog />
+        </span>
+        <span>User Management</span>
       </h1>
       <nav className={classes.header_menu}>
         <NavLink

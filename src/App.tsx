@@ -11,14 +11,16 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <ToastContainer position="top-center" className="toast" />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/addUser" element={<AddUser />} />
-        <Route path="/edit/:id" element={<AddUser />} />
-        <Route path="/view/:id" element={<View />} />
-      </Routes>
+      <div className="app_container">
+        <Header />
+        <ToastContainer position="top-center" className="toast" />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/addUser" element={<AddUser />} />
+          <Route path="/edit/:id" element={<AddUser />} />
+          <Route path="/view/:id" element={<View />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

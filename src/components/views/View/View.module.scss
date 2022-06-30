@@ -2,16 +2,26 @@
 
 .user {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    @media (orientation: landscape) {
+        top: 90%;
+    }
+    @include mq(xlarge){
+        top: 50%;
+    }
     &_card {
         display: flex;
         flex-direction: column;
         align-content: center;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        font-size: 0.8rem;
+        @include mq(medium){
+            font-size: 1rem;
+        }
     }
     &_header {
         height: 10vh;
@@ -22,9 +32,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.4rem;
             & span {
                 margin-left: 0.5rem;
+                font-size: 0.8rem;
+                @include mq(xsmall){
+                    font-size: 1rem;
+                }
             }
         }
     }
@@ -33,6 +46,10 @@
         & span {
             display: inline-block;
             margin-bottom: 10px;
+            font-size: 0.8rem;
+            @include mq(medium){
+                font-size: 1rem;
+            }
           }
     }
   }

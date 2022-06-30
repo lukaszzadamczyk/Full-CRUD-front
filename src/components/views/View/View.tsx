@@ -5,6 +5,7 @@ import { UserEntity } from "types";
 import { Btn } from "../../common/Btn/Btn";
 import classes from "./View.module.scss";
 import btnClasses from "../../common/Btn/Btn.module.scss";
+import { FaUserTie } from "react-icons/fa";
 
 const initialState: UserEntity = {
   name: "",
@@ -27,6 +28,9 @@ export const View = () => {
       <div className={classes.user_card}>
         <div className={classes.user_header}>
           <p>
+            <span>
+              <FaUserTie />
+            </span>
             <span>User Details</span>
           </p>
         </div>
