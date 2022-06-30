@@ -4,8 +4,8 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { UserEntity } from "types";
 import { Btn } from "../../common/Btn/Btn";
-
-import "./Home.css";
+import classes from "./Home.module.scss";
+import btnClasses from "../../common/Btn/Btn.module.scss";
 
 export const Home = () => {
   const [data, setData] = useState<UserEntity[]>([]);
@@ -28,12 +28,16 @@ export const Home = () => {
   };
 
   return (
-    <div className="users_container">
+    <div className={classes.users}>
       <Link to="addUser">
-        <Btn classNameBtn="btn btn-contact" text="Add User" />
+        <Btn
+          classNameBtn={btnClasses.btn}
+          classNameBtnSecondary={btnClasses.btn_contact}
+          text="Add User"
+        />
       </Link>
-      <table className="users_table">
-        <thead className="users_table_header">
+      <table className={classes.users_table}>
+        <thead className={classes.users_header}>
           <tr>
             <th>No.</th>
             <th>Name</th>
@@ -42,7 +46,7 @@ export const Home = () => {
             <th>Action</th>
           </tr>
         </thead>
-        <tbody className="users_table_body">
+        <tbody className={classes.users_body}>
           {data.map((item, index) => {
             const { id, name, contact, email } = item;
             return (
@@ -51,17 +55,26 @@ export const Home = () => {
                 <td>{name}</td>
                 <td>{contact}</td>
                 <td>{email}</td>
-                <td className="users_buttons">
+                <td className={classes.users_buttons}>
                   <Link to={`/edit/${id}`}>
-                    <Btn classNameBtn="btn btn-edit" text="Edit" />
+                    <Btn
+                      classNameBtn={btnClasses.btn}
+                      classNameBtnSecondary={btnClasses.btn_edit}
+                      text="Edit"
+                    />
                   </Link>
                   <Btn
-                    classNameBtn="btn btn-delete"
+                    classNameBtn={btnClasses.btn}
+                    classNameBtnSecondary={btnClasses.btn_delete}
                     text="Delete"
                     deleteUser={() => handleDeleteUser(id as string)}
                   />
                   <Link to={`/view/${id}`}>
-                    <Btn classNameBtn="btn btn-view" text="View" />
+                    <Btn
+                      classNameBtn={btnClasses.btn}
+                      classNameBtnSecondary={btnClasses.btn_view}
+                      text="View"
+                    />
                   </Link>
                 </td>
               </tr>

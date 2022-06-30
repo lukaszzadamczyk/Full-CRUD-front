@@ -7,19 +7,20 @@ import { View } from "./components/views/View/View";
 import { Header } from "./components/Header/Header";
 
 import "react-toastify/dist/ReactToastify.css";
-import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
-      <Header></Header>
-      <ToastContainer position="top-center" className="toast" />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/addUser" element={<AddUser />} />
-        <Route path="/edit/:id" element={<AddUser />} />
-        <Route path="/view/:id" element={<View />} />
-      </Routes>
+      <div className="app_container">
+        <Header />
+        <ToastContainer position="top-center" className="toast" />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/addUser" element={<AddUser />} />
+          <Route path="/edit/:id" element={<AddUser />} />
+          <Route path="/view/:id" element={<View />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

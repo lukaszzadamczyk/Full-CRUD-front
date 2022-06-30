@@ -1,17 +1,19 @@
 import React from "react";
 
-import "./Btn.css";
-
 interface Props {
   text: string;
   classNameBtn: string;
+  classNameBtnSecondary: string;
   deleteUser?: () => void;
 }
 
 export const Btn = (props: Props) => {
-  const { text, classNameBtn, deleteUser } = props;
+  const { text, classNameBtn, classNameBtnSecondary, deleteUser } = props;
   return (
-    <button className={classNameBtn} onClick={deleteUser}>
+    <button
+      className={`${classNameBtn} ${classNameBtnSecondary}`}
+      onClick={deleteUser}
+    >
       {text}
     </button>
   );

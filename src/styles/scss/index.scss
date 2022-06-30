@@ -1,0 +1,25 @@
+@import './variables/variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    width: 100%;
+    font-family: $Poppins;
+}
+
+#root{
+  height: 100%;
+}
+
+.toast {
+  margin-top: 8vh;
+}
+
+.app_container{
+  max-width: 1920px;
+  margin: 0 auto;
+}
