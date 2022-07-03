@@ -45,7 +45,7 @@ export const View = () => {
           <span>{user.contact}</span>
           <br />
           <strong>Email: </strong>
-          <span>{user.contact}</span>
+          <span>{user.email}</span>
           <Link to="/">
             <Btn
               classNameBtn={btnClasses.btn}
