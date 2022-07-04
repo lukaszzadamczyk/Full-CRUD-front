@@ -1,3 +1,17 @@
+#USER MANAGEMENT
+
+User management application. It is a full-stack application. This application is useful for managing the user list. There you can add new users to the database. You can edit users in the database, and you can delete them. It is also possible to display the data of a single user. The application is responsive and uses routing.
+
+##Environment
+
+**Node**: 16.15.0
+
+**React**: 18.2.0
+
+**TypeScript**: 4.7.4
+
+**React-Router-Dom**: 6.3.0
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
