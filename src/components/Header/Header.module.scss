@@ -1,0 +1,57 @@
+@import '../../styles/scss/variables/variables.scss';
+
+.header {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: $primary;
+    transition: 0.3s ease all;
+    &_logo {
+        display: flex;
+        flex: 50%;
+        justify-content: left;
+        font-size: 1rem;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        @include mq(xsmall){
+            font-size: 1rem;
+        }
+        @include mq(large){
+            font-size: 1.5rem;
+        }
+        @include mq(xxlarge){
+            font-size: 2rem;
+        }
+    }
+    &_logo span {
+        margin-left: 1rem;
+    }
+    &_menu {
+        display: flex;
+        flex: 50%;
+        justify-content: right;
+        max-height: 80px;
+        font-size: 0.8rem;
+        @include mq(xsmall){
+            font-size: 1rem;
+        }
+    }
+    &_link {
+        padding: 0 1rem;
+        border-right: 1px solid $white;
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.3s;
+    }
+    &_link:hover {
+        color: $add;
+    }
+    &_link:nth-child(2) {
+        border: none;
+    }
+  }

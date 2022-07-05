@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+$Poppins: 'Poppins', sans-serif;
+
+//colors
+$primary: #058d96;
+$add: #e82764;
+$edit: #3a8219;
+$delete: #b14038;
+$view: #b6bcb5;
+$white: #fff;
+$black: #000;
+
+$breakpoints: (
+    xsmall: 360px,
+    small: 460px,
+    medium: 640px,
+    large: 800px,
+    xlarge: 1024px,
+    xxlarge: 1280px,
+    xxxlarge: 1440px,
+);
+
+@mixin mq($breakpoint) {
+    $size: map-get($map: $breakpoints, $key: $breakpoint);
+    @if ($size){
+        @media (min-width: #{$size}) {
+            @content;
+        }
+    }
+    @else{
+        @error '"#{$breakpoint}" - it does not recognize this size';
+    }
+}

@@ -1,0 +1,18 @@
+@import '../../../styles/scss/variables/variables.scss';
+
+.input_name,
+.input_contact,
+.input_email {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid $primary;
+  outline: none;
+}
+.input_name:focus,
+.input_contact:focus,
+.input_email:focus {
+  border-bottom: 4px solid $primary;
+}
