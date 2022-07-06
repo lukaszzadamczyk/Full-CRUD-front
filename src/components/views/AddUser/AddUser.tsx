@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { Input } from "../../common/Input/Input";
 import { Label } from "../../common/Label/Label";
+import { apiUrl } from "../../../config/api";
 import classes from "./AddUser.module.scss";
 import btnClasses from "../../common/Btn/Btn.module.scss";
 import inputClasses from "../../common/Input/Input.module.scss";
@@ -27,7 +28,7 @@ export const AddUser = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/get/${id}`)
+      .get(`${apiUrl}/api/get/${id}`)
       .then((res) => setNewDataUser({ ...res.data[0] }));
   }, [id]);
 
@@ -38,7 +39,7 @@ export const AddUser = () => {
     } else {
       if (!id) {
         axios
-          .post("http://localhost:3001/api/add", {
+          .post(`${apiUrl}/api/add`, {
             name,
             contact,
             email,
@@ -53,7 +54,7 @@ export const AddUser = () => {
         }, 500);
       } else {
         axios
-          .put(`http://localhost:3001/api/update/${id}`, {
+          .put(`${apiUrl}/api/update/${id}`, {
             name,
             contact,
             email,

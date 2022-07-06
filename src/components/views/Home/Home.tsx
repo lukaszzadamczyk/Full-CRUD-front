@@ -4,6 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { UserEntity } from "types";
 import { Btn } from "../../common/Btn/Btn";
+import { apiUrl } from "../../../config/api";
 import classes from "./Home.module.scss";
 import btnClasses from "../../common/Btn/Btn.module.scss";
 
@@ -11,7 +12,7 @@ export const Home = () => {
   const [data, setData] = useState<UserEntity[]>([]);
 
   const loadData = async () => {
-    const response = await axios.get("http://localhost:3001/api/get");
+    const response = await axios.get(`${apiUrl}/api/get`);
     setData(response.data);
   };
 
@@ -21,7 +22,7 @@ export const Home = () => {
 
   const handleDeleteUser = (id: string) => {
     if (window.confirm("Are you sure you want to delete the User?")) {
-      axios.delete(`http://localhost:3001/api/delete/${id}`);
+      axios.delete(`${apiUrl}/api/delete/${id}`);
       toast.success("Contact Deleted 😔");
       setTimeout(() => loadData(), 500);
     }

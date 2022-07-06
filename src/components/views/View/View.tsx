@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { UserEntity } from "types";
 import { Btn } from "../../common/Btn/Btn";
+import { apiUrl } from "../../../config/api";
 import classes from "./View.module.scss";
 import btnClasses from "../../common/Btn/Btn.module.scss";
 import { FaUserTie } from "react-icons/fa";
@@ -20,7 +21,7 @@ export const View = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/get/${id}`)
+      .get(`${apiUrl}/api/get/${id}`)
       .then((res) => setUser({ ...res.data[0] }));
   }, [id]);
   return (
