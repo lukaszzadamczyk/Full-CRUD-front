@@ -16,6 +16,12 @@ Demo preview of the application: [DEMO](https://user-management.networkmanager.p
 
 **React-Router-Dom**
 
+## Video
+
+Demo preview of the application: <a href="[http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE](https://www.youtube.com/watch?v=7HaW0Qmty44)
+" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
 ## 📸 Screenshots
 
 ### 👨‍👩‍👧‍👦 All Users View
