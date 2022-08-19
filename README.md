@@ -42,7 +42,7 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 <img width="1439" alt="InfoUser" src="https://user-images.githubusercontent.com/62346487/185619401-e50d2e0c-cf7e-43e3-99be-75075d812571.png">
 
-# Getting Started with Create React App
+# Development
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
