@@ -1,4 +1,4 @@
-# USER MANAGEMENT
+#  USER MANAGEMENT
 
 User management application. It is a full-stack application. This application is useful for managing the user list. There you can add new users to the database. You can edit users in the database, and you can delete them. It is also possible to display the data of a single user. The application is responsive and uses routing.
 
@@ -8,13 +8,31 @@ Demo preview of the application: [DEMO](https://user-management.networkmanager.p
 
 ## Environment
 
-**Node**: 16.15.0
+**Node**
 
-**React**: 18.2.0
+**React**
 
-**TypeScript**: 4.7.4
+**TypeScript**
 
-**React-Router-Dom**: 6.3.0
+**React-Router-Dom**
+
+## Screenshots
+
+### All Users View
+
+<img width="1439" alt="AllUsers" src="https://user-images.githubusercontent.com/62346487/185619080-5000909e-17b8-4efc-ac3b-7d66b31a1c0e.png">
+
+### Add New User View
+
+<img width="1439" alt="AddUser" src="https://user-images.githubusercontent.com/62346487/185619218-5bcec958-c82a-44b1-8438-6371d9396b2c.png">
+
+### Update User
+
+<img width="1439" alt="UpdateUser" src="https://user-images.githubusercontent.com/62346487/185619290-6dc4ae26-7f7c-4ab1-b2f5-858ec13fa8c1.png">
+
+### User Info
+
+<img width="1439" alt="InfoUser" src="https://user-images.githubusercontent.com/62346487/185619401-e50d2e0c-cf7e-43e3-99be-75075d812571.png">
 
 # Getting Started with Create React App
 
@@ -24,7 +42,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+```bash 
+  npm start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -32,12 +52,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+```bash 
+  npm test
+```
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+```bash 
+  npm run build
+```
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -47,7 +71,9 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+```bash 
+  npm run eject
+```
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
